@@ -22,10 +22,10 @@ jobs:
     - name: Insatll gtest
       run: sudo apt-get install libgtest-dev
     - name: Cmake Gtest
-      run: sudo cmake CMakeLists.txt -C /usr/src/gtest/
-    - name: Cmake make
+      run: sudo cmake -C /usr/src/gtest/CMakeLists.txt
+    - name: Cmake -C /usr/src/gtest/make
       run: sudo make
-    - name: Cmake make
+    - name: Copy
       run: sudo cp *.a /usr/lib
     - name: make
       run: make
