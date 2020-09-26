@@ -1,2 +1,2 @@
 all:
-	g++ sample/account.cc sample/account_test.cc
+	g++ Account/account.cc Account/account_test.cc
