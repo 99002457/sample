@@ -21,10 +21,8 @@ jobs:
       run: cd build && ctest
     - name: Insatll gtest
       run: sudo apt-get install libgtest-dev
-    - name: Change Direrectory
-      run: cd /usr/src/gtest
     - name: Cmake Gtest
-      run: sudo cmake CMakeLists.txt
+      run: sudo cmake CMakeLists.txt -C cd /usr/src/
     - name: Cmake make
       run: sudo make
     - name: Cmake make
