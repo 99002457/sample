@@ -1,4 +1,3 @@
-cmake_minimum_requried(VERSION 3.5.1)
 project(sample)
 
 
