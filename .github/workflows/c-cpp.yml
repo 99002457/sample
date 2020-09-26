@@ -31,3 +31,5 @@ jobs:
       run: sudo cp *.a /usr/lib
     - name: make
       run: make -f Makefile
+    - name: output
+      run: ./a.out
