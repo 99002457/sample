@@ -11,4 +11,4 @@ jobs:
       - name: Install cppcheck
         run: sudo apt-get -y install cppcheck
       - name: Cppcheck code
-        run: cppcheck Account/account.cc
+        run: cppcheck Account/account.cc Account/account_test.cc
