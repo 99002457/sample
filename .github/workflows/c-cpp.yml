@@ -22,7 +22,7 @@ jobs:
     - name: Insatll gtest
       run: sudo apt-get install libgtest-dev
     - name: Cmake Gtest
-      run: sudo cmake CMakeLists.txt -C /usr/src/
+      run: sudo cmake CMakeLists.txt -C /usr/src/gtest
     - name: Cmake make
       run: sudo make
     - name: Cmake make
