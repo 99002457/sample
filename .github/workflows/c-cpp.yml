@@ -19,5 +19,15 @@ jobs:
       run:  cmake --build build
     - name: Test
       run: cd build && ctest
+    - name: Insatll gtest
+      run: sudo apt-get install libgtest-dev
+    - name: Change Direrectory
+      run: cd /usr/src/gtest
+    - name: Cmake Gtest
+      run: sudo cmake CMakeLists.txt
+    - name: Cmake make
+      run: sudo make
+    - name: Cmake make
+      run: sudo cp *.a /usr/lib
     - name: make
       run: make -f Makefile
