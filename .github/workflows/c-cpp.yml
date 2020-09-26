@@ -21,6 +21,8 @@ jobs:
       run: cd build && ctest
     - name: Insatll gtest
       run: sudo apt-get install libgtest-dev
+    - name: g
+      run: sudo apt-get install cmake
     - name: Cmake Gtest
       run: sudo cmake -C /usr/src/gtest/CMakeLists.txt
     - name: Cmake -C /usr/src/gtest/make
