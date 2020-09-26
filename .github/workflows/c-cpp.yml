@@ -8,12 +8,16 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+ 
 
     steps:
     - uses: actions/checkout@v2
-    - name: ChangeD
-      run: cd /user/bin
+    - name: Configure
+      run: mkdir build && cd build  && cmake -DCMAKE_CXX_FLAGS="-Werror" ..
+    - name: Build
+      run:  cmake --build build
+    - name: Test
+      run: cd build && ctest
     - name: make
       run: make
