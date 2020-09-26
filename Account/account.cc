@@ -2,7 +2,7 @@
 
 #include "account.h"
 
-account::account():acc_no("0"),acc_name(""),balance(0) {}
+account::account():acc_no("0"),acc_name(""),balance(0) {} ;
 
 account::account(const std::string &number,const std::string &name, double bal): acc_no(number),acc_name(name),balance(bal) {}
 
