@@ -18,11 +18,12 @@ jobs:
     - name: g
       run: sudo apt-get install cmake
     - name: Cmake Gtest
-      run: sudo cmake -C /usr/src/gtest/CMakeLists.txt
-    - name: Cmake -C /usr/src/gtest/make
-      run: sudo make
-    - name: Copy
-      run: sudo cp *.a /usr/lib
+      run: |
+            cd /usr/src/gtest
+            sudo cmake CMakeLists.txt
+            sudo make
+            sudo cp *.a /usr/lib
+            sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
     - name: Configure
       run: mkdir build && cd build  && cmake -DCMAKE_CXX_FLAGS="-Werror" ..
     - name: Build
